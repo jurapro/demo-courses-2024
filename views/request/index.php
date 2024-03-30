@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Оставить новое заявление', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Оставить новое заявление', ['create'], ['class' => 'btn btn-primary']) ?>
     </p>
 
 
@@ -22,8 +22,8 @@ $this->params['breadcrumbs'][] = $this->title;
     foreach ($dataProvider->models as $model){
 
         $classCard = match ($model->status->code) {
-            'approve' => 'text-white bg-success',
-            'rejected' => 'text-white bg-danger',
+            'approve' => 'text-white bg-success-card',
+            'rejected' => 'text-white bg-danger-card',
             'new' => 'bg-light',
         }
 

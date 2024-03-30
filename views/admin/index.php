@@ -21,9 +21,9 @@ $this->params['breadcrumbs'][] = $this->title;
     foreach ($dataProvider->models as $model){
 
         $classCard = match ($model->status->code) {
-            'approve' => 'text-white bg-success',
-            'rejected' => 'text-white bg-danger',
-            'new' => 'bg-light',
+            'approve' => 'text-white bg-success-card',
+            'rejected' => 'text-white bg-danger-card',
+            'new' => 'bg-light'
         }
 
         ?>
